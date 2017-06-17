@@ -12,6 +12,8 @@ namespace LeapMIDI
     {
         private Controller controller = new Controller();
 
+        public float hands { get; private set; }
+
         public float posX { get; private set; }
         public float posY { get; private set; }
         public float posZ { get; private set; }
@@ -39,6 +41,8 @@ namespace LeapMIDI
                    "Hands: " + frame.Hands.Count + "\n" +
                    "Fingers: " + frame.Fingers.Count + "\n\n";
 
+            hands = frame.Hands.Count;
+
             if (frame.Hands.Count == 1)
             {
                 info += "Hand #1 Position X:" + frame.Hands[0].PalmPosition.x + "\n";
@@ -62,7 +66,7 @@ namespace LeapMIDI
                 pinch = frame.Hands[0].PinchStrength;
             }
             else
-            {
+            {                
                 velX = 0;
                 velY = 0;
                 velZ = 0;
