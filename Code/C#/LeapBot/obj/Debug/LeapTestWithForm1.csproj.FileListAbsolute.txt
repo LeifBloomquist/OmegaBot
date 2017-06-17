@@ -1,0 +1,23 @@
+c:\users\leif\documents\visual studio 2013\Projects\LeapTest1\LeapTestWithForm1\bin\Debug\LeapTestWithForm1.exe.config
+c:\users\leif\documents\visual studio 2013\Projects\LeapTest1\LeapTestWithForm1\bin\Debug\LeapTestWithForm1.exe
+c:\users\leif\documents\visual studio 2013\Projects\LeapTest1\LeapTestWithForm1\bin\Debug\LeapTestWithForm1.pdb
+c:\users\leif\documents\visual studio 2013\Projects\LeapTest1\LeapTestWithForm1\bin\Debug\LeapCSharp.NET4.0.dll
+c:\users\leif\documents\visual studio 2013\Projects\LeapTest1\LeapTestWithForm1\obj\Debug\LeapTestWithForm1.csprojResolveAssemblyReference.cache
+c:\users\leif\documents\visual studio 2013\Projects\LeapTest1\LeapTestWithForm1\obj\Debug\LeapTestWithForm1.Properties.Resources.resources
+c:\users\leif\documents\visual studio 2013\Projects\LeapTest1\LeapTestWithForm1\obj\Debug\LeapTestWithForm1.csproj.GenerateResource.Cache
+c:\users\leif\documents\visual studio 2013\Projects\LeapTest1\LeapTestWithForm1\obj\Debug\LeapTestWithForm1.exe
+c:\users\leif\documents\visual studio 2013\Projects\LeapTest1\LeapTestWithForm1\obj\Debug\LeapTestWithForm1.pdb
+C:\Users\Leif\Documents\Visual Studio 2013\Projects\LeapTest1\LeapTestWithForm1\obj\Debug\LeapTestWithForm1.Form1.resources
+C:\Leif\GitHub\LeapMotion\C#\LeapTestWithForm1\bin\Debug\LeapTestWithForm1.exe.config
+C:\Leif\GitHub\LeapMotion\C#\LeapTestWithForm1\obj\Debug\LeapTestWithForm1.exe
+C:\Leif\GitHub\LeapMotion\C#\LeapTestWithForm1\obj\Debug\LeapTestWithForm1.pdb
+C:\Leif\GitHub\LeapMotion\C#\LeapTestWithForm1\bin\Debug\LeapTestWithForm1.exe
+C:\Leif\GitHub\LeapMotion\C#\LeapTestWithForm1\bin\Debug\LeapTestWithForm1.pdb
+C:\Leif\GitHub\LeapMotion\C#\LeapTestWithForm1\bin\Debug\LeapCSharp.NET4.0.dll
+C:\Leif\GitHub\LeapMotion\C#\LeapTestWithForm1\obj\Debug\LeapTestWithForm1.csprojResolveAssemblyReference.cache
+C:\Leif\GitHub\LeapMotion\C#\LeapTestWithForm1\obj\Debug\LeapTestWithForm1.Properties.Resources.resources
+C:\Leif\GitHub\LeapMotion\C#\LeapTestWithForm1\obj\Debug\LeapTestWithForm1.csproj.GenerateResource.Cache
+C:\Leif\GitHub\LeapMotion\C#\LeapTestWithForm1\obj\Debug\LeapTestWithForm1.MainForm.resources
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\bin\Debug\LeapTestWithForm1.exe.config
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\obj\Debug\LeapTestWithForm1.exe
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\obj\Debug\LeapTestWithForm1.pdb

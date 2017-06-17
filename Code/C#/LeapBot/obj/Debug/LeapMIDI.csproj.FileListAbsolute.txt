@@ -1,0 +1,13 @@
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\obj\Debug\LeapMIDI.csprojResolveAssemblyReference.cache
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\obj\Debug\LeapMIDI.csproj.GenerateResource.Cache
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\obj\Debug\LeapTestWithForm1.exe
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\bin\Debug\LeapTestWithForm1.exe.config
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\bin\Debug\LeapTestWithForm1.exe
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\bin\Debug\LeapTestWithForm1.pdb
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\bin\Debug\LeapCSharp.NET4.0.dll
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\bin\Debug\Sanford.Multimedia.Midi.dll
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\bin\Debug\Sanford.Multimedia.Midi.pdb
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\bin\Debug\Sanford.Multimedia.Midi.xml
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\obj\Debug\LeapMIDI.MainForm.resources
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\obj\Debug\LeapMIDI.Properties.Resources.resources
+C:\Leif\GitHub\LeapMotion\C#\LeapMIDI\obj\Debug\LeapTestWithForm1.pdb
