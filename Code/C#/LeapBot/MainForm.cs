@@ -51,7 +51,7 @@ namespace LeapMIDI
         private void RobotControl()
         {
             robot_count++;
-            if (robot_count < 10 )  return;
+            if (robot_count < 5 )  return;
             robot_count = 0;
 
             if (leap.hands != 1)
@@ -65,7 +65,7 @@ namespace LeapMIDI
             if (speed < 0) speed = 0;
             if (speed > 100) speed = 100;
 
-            float leftright = (leap.velX / 20f); // ~-50.0 to 50.0
+            float leftright = (leap.posX / 5f); 
 
             int left = (int)(speed + leftright);
             int right = (int)(speed - leftright);
@@ -76,7 +76,7 @@ namespace LeapMIDI
             if (right < 0) right = 0;
             if (right > 100) right = 100;
 
-            SendLeftRight(left, right);
+            SendLeftRight(left / 5, right / 5);   // !!!!
         }
 
         private void SendUdp(int srcPort, string dstIp, int dstPort, byte[] data)
