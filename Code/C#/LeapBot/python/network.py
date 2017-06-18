@@ -35,12 +35,14 @@ while True:
        data, addr = s.recvfrom(100)
        print "Received: ", data
        leftright = data.split(",")
-       print "left: ", leftright[0]
-       print "right: ", leftright[1]
-       SetLeftRight(leftright[0], leftright[1])
+       left = int(leftright[0])
+       right = int(leftright[1])
+       print "   Left: ", left
+       print "   Right: ", right
+       SetLeftRight(left, right)
 
     except socket.timeout:
-       print "No response from server"
+       print "Receive timed out"
        Stop()
 
     except IndexError:

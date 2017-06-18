@@ -36,6 +36,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.StopButton = new System.Windows.Forms.Button();
+            this.CommandLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -111,6 +112,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.CommandLabel);
             this.groupBox2.Controls.Add(this.StopButton);
             this.groupBox2.Location = new System.Drawing.Point(288, 422);
             this.groupBox2.Name = "groupBox2";
@@ -128,6 +130,18 @@
             this.StopButton.TabIndex = 0;
             this.StopButton.Text = "Stop";
             this.StopButton.UseVisualStyleBackColor = false;
+            this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
+            // 
+            // CommandLabel
+            // 
+            this.CommandLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.CommandLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CommandLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CommandLabel.Location = new System.Drawing.Point(6, 16);
+            this.CommandLabel.Name = "CommandLabel";
+            this.CommandLabel.Size = new System.Drawing.Size(251, 71);
+            this.CommandLabel.TabIndex = 1;
+            this.CommandLabel.Text = "--";
             // 
             // MainForm
             // 
@@ -167,6 +181,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button StopButton;
+        private System.Windows.Forms.Label CommandLabel;
     }
 }
 

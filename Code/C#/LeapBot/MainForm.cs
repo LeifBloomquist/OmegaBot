@@ -57,15 +57,20 @@ namespace LeapMIDI
             if (leap.hands != 1)
             {
                  SendLeftRight(0, 0);
+                 return;
             }
 
-            float speed = (leap.posY - 80f) / 400;
+            float speed = (leap.posY - 80f) / 4f;
 
             if (speed < 0) speed = 0;
             if (speed > 100) speed = 100;
 
-          //  int left = 
-            SendLeftRight((int)speed, (int)speed);
+            float leftright = (leap.velX / 1000f);
+
+            int left = (int)(speed * leftright);
+            int right = 100 - left;
+
+            SendLeftRight(left, right);
         }
 
         private void SendUdp(int srcPort, string dstIp, int dstPort, byte[] data)
@@ -78,6 +83,7 @@ namespace LeapMIDI
         {
             String command = left.ToString() + "," + right.ToString();
             SendUdp(1000, "192.168.7.20", 2000, Encoding.ASCII.GetBytes(command));
+            CommandLabel.Text = command;
         }
 
         private void Animate()
@@ -117,6 +123,11 @@ namespace LeapMIDI
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
           Environment.Exit(0);
+        }
+
+        private void StopButton_Click(object sender, EventArgs e)
+        {
+            SendLeftRight(0, 0);
         }
     }
 }
