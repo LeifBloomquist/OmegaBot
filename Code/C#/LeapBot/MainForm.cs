@@ -65,10 +65,16 @@ namespace LeapMIDI
             if (speed < 0) speed = 0;
             if (speed > 100) speed = 100;
 
-            float leftright = (leap.velX / 1000f);
+            float leftright = (leap.velX / 20f); // ~-50.0 to 50.0
 
-            int left = (int)(speed * leftright);
-            int right = 100 - left;
+            int left = (int)(speed + leftright);
+            int right = (int)(speed - leftright);
+
+            if (left < 0) left = 0;
+            if (left > 100) left = 100;
+
+            if (right < 0) right = 0;
+            if (right > 100) right = 100;
 
             SendLeftRight(left, right);
         }
