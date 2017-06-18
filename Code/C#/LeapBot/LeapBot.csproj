@@ -87,10 +87,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="python\robot.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="python\network.py" />
+    <Content Include="..\..\python\network.py">
+      <Link>python\network.py</Link>
+    </Content>
+    <Content Include="..\..\python\robot.py">
+      <Link>python\robot.py</Link>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
