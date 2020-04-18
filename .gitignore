@@ -15,3 +15,9 @@ Code/C#/LeapBot/.vs/LeapBot/v15/Server/sqlite3/storage.ide
 Code/C#/LeapBot/.vs/LeapBot/v15/Server/sqlite3/storage.ide-shm
 Code/C#/LeapBot/.vs/LeapBot/v15/Server/sqlite3/storage.ide-wal
 Code/C#/LeapBot/.vs/LeapBot/v15/Server/sqlite3/db.lock
+Code/C#/LeapBot/bin/Debug/LeapTestWithForm1.exe
+Code/C#/LeapBot/bin/Debug/LeapTestWithForm1.pdb
+*.Cache
+*.cache
+*.exe
+Code/C#/LeapBot/obj/Debug/LeapTestWithForm1.pdb
