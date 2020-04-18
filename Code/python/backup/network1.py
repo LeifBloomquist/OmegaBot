@@ -1,4 +1,4 @@
-﻿from OmegaExpansion import pwmExp
+from OmegaExpansion import pwmExp
 import time
 import socket
 
@@ -50,5 +50,3 @@ while True:
        print
        print "Data format error"
        Stop()
-
-

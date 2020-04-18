@@ -60,7 +60,7 @@ namespace LeapMIDI
                  return;
             }
 
-            float speed = (leap.posY - 80f) / 4f;
+            float speed = (leap.posY - 80f) / 3f;
 
             if (speed < 0) speed = 0;
             if (speed > 100) speed = 100;
@@ -76,7 +76,7 @@ namespace LeapMIDI
             if (right < 0) right = 0;
             if (right > 100) right = 100;
 
-            SendLeftRight(left / 5, right / 5);   // !!!!
+            SendLeftRight(left, right);   // !!!!
         }
 
         private void SendUdp(int srcPort, string dstIp, int dstPort, byte[] data)
