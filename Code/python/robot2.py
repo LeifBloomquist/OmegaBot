@@ -112,3 +112,18 @@ def spin_right(speed, secs=0):
     stop()
   else:
     print ""
+
+# For network control
+                
+def set_left_right(left, right):
+  set_direction(right, ain1, ain2, pins.PWMA)
+  set_direction(left, bin2, bin1, pins.PWMB)
+
+def set_direction(speed, io1, io2, pin):
+  if speed < 0:  
+    set_ccw(io1, io2)
+    speed = -speed
+  else:
+    set_cw(io1, io2)  
+  
+  set_speed(pin, speed)

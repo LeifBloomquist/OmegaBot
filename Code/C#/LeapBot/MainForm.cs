@@ -1,15 +1,7 @@
-﻿using Sanford.Multimedia.Midi;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Timers;
 using System.Windows.Forms;
 
 namespace LeapMIDI
@@ -33,7 +25,7 @@ namespace LeapMIDI
 
             System.Windows.Forms.Timer aTimer = new System.Windows.Forms.Timer();            
             aTimer.Tick += OnTimedEvent;
-            aTimer.Interval = 10; // milliseconds
+            aTimer.Interval = 50; // milliseconds
             aTimer.Enabled=true;
         }   
 
@@ -46,37 +38,52 @@ namespace LeapMIDI
           RobotControl();
         }
 
-        int robot_count = 0;
-
         private void RobotControl()
         {
-            robot_count++;
-            if (robot_count < 5 )  return;
-            robot_count = 0;
-
             if (leap.hands != 1)
             {
                  SendLeftRight(0, 0);
                  return;
             }
 
-            float speed = (leap.posY - 80f) / 3f;
+            int MAX_SPEED = 50;
 
-            if (speed < 0) speed = 0;
-            if (speed > 100) speed = 100;
+            float frontback = leap.posZ / -100f;
+            float leftright = clamp(leap.posX / +100f, -1f, 1f);
 
-            float leftright = (leap.posX / 5f); 
+            float ratio = (leftright + 1f) / 2f;  // 0 to 1, 0.5 in middle
 
-            int left = (int)(speed + leftright);
-            int right = (int)(speed - leftright);
+            float left  = frontback * MAX_SPEED;
+            float right = frontback * MAX_SPEED;
 
-            if (left < 0) left = 0;
-            if (left > 100) left = 100;
+            left *= (1-ratio);
+            right *= ratio;
 
-            if (right < 0) right = 0;
-            if (right > 100) right = 100;
+            int ileft  = iclamp(left,  -MAX_SPEED, +MAX_SPEED);
+            int iright = iclamp(right, -MAX_SPEED, +MAX_SPEED);
 
-            SendLeftRight(left, right);   // !!!!
+            SendLeftRight(ileft, iright);
+        }
+
+        private float clamp(float value, float min, float max)
+        {
+            if (value < min) value = min;
+            if (value > max) value = max;
+            return value;
+        }
+
+        private int iclamp(float value, float min, float max)
+        {
+            if (value < min) value = min;
+            if (value > max) value = max;
+            return (int)value;
+        }
+
+        private int clamp(int value, int min, int max)
+        {
+            if (value < min) value = min;
+            if (value > max) value = max;
+            return value;
         }
 
         private void SendUdp(int srcPort, string dstIp, int dstPort, byte[] data)
@@ -88,7 +95,7 @@ namespace LeapMIDI
         private void SendLeftRight(int left, int right)
         {
             String command = left.ToString() + "," + right.ToString();
-            SendUdp(1000, "192.168.7.20", 2000, Encoding.ASCII.GetBytes(command));
+            SendUdp(1000, "192.168.7.29", 2000, Encoding.ASCII.GetBytes(command));
             CommandLabel.Text = command;
         }
 

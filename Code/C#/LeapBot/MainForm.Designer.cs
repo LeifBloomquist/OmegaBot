@@ -35,8 +35,8 @@
             this.SerialLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.StopButton = new System.Windows.Forms.Button();
             this.CommandLabel = new System.Windows.Forms.Label();
+            this.StopButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -121,17 +121,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Robot Control";
             // 
-            // StopButton
-            // 
-            this.StopButton.BackColor = System.Drawing.Color.Red;
-            this.StopButton.Location = new System.Drawing.Point(68, 159);
-            this.StopButton.Name = "StopButton";
-            this.StopButton.Size = new System.Drawing.Size(109, 41);
-            this.StopButton.TabIndex = 0;
-            this.StopButton.Text = "Stop";
-            this.StopButton.UseVisualStyleBackColor = false;
-            this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
-            // 
             // CommandLabel
             // 
             this.CommandLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -142,6 +131,18 @@
             this.CommandLabel.Size = new System.Drawing.Size(251, 71);
             this.CommandLabel.TabIndex = 1;
             this.CommandLabel.Text = "--";
+            // 
+            // StopButton
+            // 
+            this.StopButton.BackColor = System.Drawing.Color.Red;
+            this.StopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StopButton.Location = new System.Drawing.Point(68, 159);
+            this.StopButton.Name = "StopButton";
+            this.StopButton.Size = new System.Drawing.Size(109, 41);
+            this.StopButton.TabIndex = 0;
+            this.StopButton.Text = "Stop";
+            this.StopButton.UseVisualStyleBackColor = false;
+            this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
             // 
             // MainForm
             // 
