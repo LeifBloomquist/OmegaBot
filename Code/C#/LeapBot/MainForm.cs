@@ -46,7 +46,7 @@ namespace LeapMIDI
                  return;
             }
 
-            int MAX_SPEED = 50;
+            int MAX_SPEED = 100;
 
             float frontback = leap.posZ / -100f;
             float leftright = clamp(leap.posX / +100f, -1f, 1f);
@@ -135,7 +135,8 @@ namespace LeapMIDI
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-          Environment.Exit(0);
+            SendLeftRight(0, 0);
+            Environment.Exit(0);
         }
 
         private void StopButton_Click(object sender, EventArgs e)
